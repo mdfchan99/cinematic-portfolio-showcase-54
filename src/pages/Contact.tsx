@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -13,7 +14,7 @@ const Contact = () => {
     setIsVisible(true);
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
 
@@ -85,7 +86,7 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
-                  rows="4"
+                  rows={4}
                   className="mt-1 p-3 w-full bg-slate-800 rounded-md border border-slate-700 text-white focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
                   placeholder="Write your message here..."
                   value={message}
