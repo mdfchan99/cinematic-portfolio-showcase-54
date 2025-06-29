@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Code, Database, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,6 +13,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
+      <Navigation />
+      
       {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -inset-10 opacity-50">
@@ -20,7 +23,7 @@ const Index = () => {
         </div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 py-12">
+      <div className="relative z-10 container mx-auto px-6 py-12 pt-24">
         <div className="flex flex-col lg:flex-row items-center justify-between min-h-screen">
           {/* Left Content */}
           <div className={`lg:w-1/2 space-y-8 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>

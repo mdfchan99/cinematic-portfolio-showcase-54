@@ -1,5 +1,5 @@
-
 import { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Camera, Heart, Eye } from 'lucide-react';
 
@@ -64,17 +64,8 @@ const Photography = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      {/* Navigation */}
-      <nav className="p-6">
-        <Link 
-          to="/"
-          className="inline-flex items-center gap-2 px-4 py-2 bg-purple-800/30 rounded-full border border-purple-500/30 hover:bg-purple-700/40 transition-all duration-300"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Home</span>
-        </Link>
-      </nav>
-
+      <Navigation />
+      
       <div className="container mx-auto px-6 py-12">
         {/* Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
